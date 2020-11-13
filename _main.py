@@ -2,14 +2,17 @@ import os
 
 
 def start():
-    os.system(  '/usr/bin/python3.6 /root/scraper_0.py &'
-                '/usr/bin/python3.6 /root/scraper_1.py &'
-                '/usr/bin/python3.6 /root/scraper_2.py &'
-                '/usr/bin/python3.6 /root/scraper_3.py &'
-                '/usr/bin/python3.6 /root/scraper_4.py &'
-                '/usr/bin/python3.6 /root/scraper_5.py &'
-                '/usr/bin/python3.6 /root/scraper_6.py &'
-                '/usr/bin/python3.6 /root/scraper_7.py &'
-                '/usr/bin/python3.6 /root/scraper_8.py')
+    os.system(  '/usr/bin/python3.6 /root/college-market/scraper_1_a.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_b.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_c.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_d.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_e.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_f.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_g.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_h.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_i.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_j.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_k.py &'
+                '/usr/bin/python3.6 /root/college-market/scraper_1_l.py &')
 
 start()
