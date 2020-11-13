@@ -13,7 +13,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 class Bot:
     def __init__(self):
-        self.college_name = "Florida State University"
+        self.college_name = ""
     def __enter__(self):
         return self
     def __exit__(self, exc_type, exc_value, tb):
@@ -22,8 +22,9 @@ class Bot:
                 self.drive.quit()
         except Exception as e:
             pass
-    def browser_init(self, link):
+    def browser_init(self, link, college_name):
         self.link = link
+        self.college_name = college_name
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--headless")
