@@ -51,16 +51,21 @@ class Bot:
         org_obj_list = drive.find_elements_by_xpath("//div[@id='org-search-results']/div/div/div/a")
         print(len(org_obj_list))
         org_href_list = []
+        org_list = []
         for org_obj in org_obj_list:
             href = org_obj.get_attribute('href')
             org_href_list.append(href)
         for org_href in org_href_list:
             drive.get(org_href)
-            iwait = random.randint(2, 3) + random.random()
+            print(org_href)
+            iwait = random.randint(3, 5) + random.random()
             time.sleep(iwait)
             org = {}
             org['college_name'] = self.college_name
-            org['org_name'] = drive.find_element_by_xpath("//div/div/div/h1").text
+            try:
+                org['org_name'] = drive.find_element_by_xpath("//div/div/div/h1").text
+            except Exception as e:
+                continue
             org['link'] = org_href
             try:
                 org['email'] = drive.find_element_by_xpath("//div/div/strong[contains(text(), 'E:')]/parent::div").text.replace('Contact Email\nE: ', '')
