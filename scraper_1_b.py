@@ -1,7 +1,7 @@
 from scraper_1 import Bot
 
 with Bot() as scraper:
-    link = "https://asu.campuslabs.com/engage/organizations"
-    name = "Arizona State University"
-    scraper.browser_init(link, name)
-    scraper.main()
+    if scraper.readGoogleSheet(1):
+        scraper.browser_init()
+        scraper.main()
+        scraper.updateGoogleSheet()
